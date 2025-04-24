@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gautam Raiyani - Mobile App Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    header {
+      background-color: #121212;
+      padding: 10px 0;
+    }
+    .brand-logo {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #fff;
+      margin-left: 20px;
+    }
+    nav {
+      background-color: #121212;
+    }
+    nav ul a {
+      color: #fff;
+    }
+    #main-content {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Gautam Raiyani</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#" onclick="showHome()">Home</a></li>
+        <li><a href="#" onclick="showMessage('About Me')">About Me</a></li>
+        <li><a href="#" onclick="showMessage('Projects')">Projects</a></li>
+        <li><a href="#" onclick="showContact()">Contact</a></li>
+        <li><a href="https://your-privacy-policy-link.com" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://your-terms-of-use-link.com" target="_blank">Terms of Use</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <div class="container">
+    <h2>Hello, I'm Gautam Raiyani</h2>
+    <p>I’m a solo mobile application developer passionate about building powerful and user-friendly apps that make a real impact. From utility tools to educational platforms and live services, I handle everything from design to deployment.</p>
+    <p>With a strong focus on performance, clean architecture, and user privacy, my goal is to deliver experiences that people trust and enjoy using every day.</p>
+    <p>Want to collaborate or have questions? Reach out and let’s connect.</p>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+  function showMessage(section) {
+    document.getElementById('main-content').innerHTML = '<div class="container"><h2>' + section + '</h2><p>Content for ' + section + ' section coming soon...</p></div>';
+  }
+
+  function showHome() {
+    document.getElementById('main-content').innerHTML = `
+      <div class="container">
+        <h2>Hello, I'm Gautam Raiyani</h2>
+        <p>I’m a solo mobile application developer passionate about building powerful and user-friendly apps that make a real impact. From utility tools to educational platforms and live services, I handle everything from design to deployment.</p>
+        <p>With a strong focus on performance, clean architecture, and user privacy, my goal is to deliver experiences that people trust and enjoy using every day.</p>
+        <p>Want to collaborate or have questions? Reach out and let’s connect.</p>
+      </div>`;
+  }
+
+  function showContact() {
+    document.getElementById('main-content').innerHTML = `
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:gautamraiyani93@gmail.com">gautamraiyani93@gmail.com</a></p>
+      </div>`;
+  }
+</script>
+
+</body>
+</html>
